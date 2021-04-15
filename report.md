@@ -4,13 +4,13 @@
 
 In a prior analysis, using an ordinary least squares regression, I created a model that explained 55.7% of the variation in Boeing (BA) common stock pricing using a 7-day rolling average for U.S COVID-19 mortalities. Additionally, I found this statistic had a correlation with the daily price of **-0.749**. 
 
-Recently, I learned about time-series analysis and I wanted to revist this data with new tools. 
+Recently, I learned about time-series analysis and I wanted to revisit this data with new tools. 
 
 I split the data into a train and test set, then I used an ARIMA (Auto Regressive Integrated Moving Average) model to and predict prices for the test set.
 
 I created multiple models, one using the SPY (SPDR S&P ETF Trust) security as a benchmark to see if the 7-day rolling mortality statistic outperformed the SPY as a predictor or helped to improve the predictions.
 
-I created the three models, used the models to predict the price for 25 days, took the difference in the predictions from the test data set, sqaured the differences, and added them for each model. The results were:
+I created the three models, used the models to predict the price for 25 days, took the difference in the predictions from the test data set, squared the differences, and added them for each model. The results were:
 
 - Using just the **SPY index**, the sum of the difference between predicted and actual prices squared was **39.64275095954604**
 - Using just the **COVID data**, the sum of the difference between predicted and actual prices squared was **80.52527950668268**
@@ -49,7 +49,7 @@ The **deathIncrease** column was a daily aggregate from all the reporting states
 
 The total data set was split, allocating 80% (97 obs.) of the values to training set, and 20% (25 obs.) to the test set.
 
-### Modelling
+### Modeling
 
 Each of the three models was created using an automated ARIMA function. Additionally, each model received the BA training set, and one or more exogenous variables. The potential orders for the model were capped as follows:
 
@@ -85,7 +85,7 @@ Finally, I calculated the differences, squared them, and added up the total.
 
 <img src="./pred_w_spy.png" alt="" />
 
-The sum of the squared differences totalled **39.64275095954604**
+The sum of the squared differences totaled **39.64275095954604**
 
 ### COVID only exog variable results
 
@@ -107,7 +107,7 @@ Finally, I calculated the differences, squared them, and added up the total.
 
 <img src="./pred_x_covid.png" alt="" />
 
-The sum of the squared differences totalled **80.52527950668268**
+The sum of the squared differences totaled **80.52527950668268**
 
 ### COVID + SPY exog variable results
 
@@ -130,7 +130,7 @@ Finally, I calculated the differences, squared them, and added up the total.
 
 <img src="./pred_w_both.png" alt="" />
 
-The sum of the squared differences totalled **16.425098154198338**
+The sum of the squared differences totaled **16.425098154198338**
 
 ## Conclusion
 
