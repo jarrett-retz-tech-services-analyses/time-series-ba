@@ -2,6 +2,7 @@
 
 <h1 align="center">Auto ARIMA Time-Series Analysis: U.S COVID-19 Mortalities, and US Equities</h1>
 
+Exploration of the impacts of COVID deaths on Boeing (BA) daily price. To view the full report in the browser, view the `report.md` file.
 ## Abstraction
 
 In a prior analysis, using an ordinary least squares regression, I created a model that explained 55.7% of the variation in Boeing (BA) common stock pricing using a 7-day rolling average for U.S COVID-19 mortalities. Additionally, I found this statistic had a correlation with the daily price of **-0.749**. 
